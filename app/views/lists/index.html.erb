@@ -1,6 +1,7 @@
 <div class="navbar">
-Lists
+  <h1>Take a look at your lists</h1>
 </div>
+
 <ul>
   <% @lists.each do |list| %>
     <li><%= link_to list.name, list_path(list) %></li>
