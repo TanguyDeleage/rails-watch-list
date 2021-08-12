@@ -1,0 +1,19 @@
+<%= @list.name %>
+<ul>
+  <% @list.bookmarks.each do |bookmark| %>
+    <li>
+      <%=  bookmark.comment %>
+      <%= link_to "❌", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure ?"} %>
+    </li>
+  <% end %>
+</ul>
+
+<%= simple_form_for [ @list, @bookmark] do |f| %>
+  <%= f.input :comment %>
+  <%= f.association :movie %>
+  <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
+<% end %>
+
+<%# <%= link_to("Delete", lists_path(@list), method: :delete, data: { confirm: "Are you sure ?"}) %>
+
+<%= link_to("Back to the list", lists_path) %>
