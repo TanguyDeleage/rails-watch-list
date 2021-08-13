@@ -1,19 +1,30 @@
-<%= @list.name %>
-<ul>
+ <div class="container">
+  <%= @list.name %>
+ </div>
+
+<div class="cards">
   <% @list.bookmarks.each do |bookmark| %>
-    <li>
+  <div class="card">
+    <img src="<%= bookmark.movie.poster_url %>" alt="" class="img-thumbnail">
+    <div class="card-body">
+      <%=  bookmark.movie.title %>
+      <%=  bookmark.movie.overview %>
       <%=  bookmark.comment %>
       <%= link_to "❌", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure ?"} %>
-    </li>
+    </div>
+  </div>
   <% end %>
-</ul>
+</div>
 
-<%= simple_form_for [ @list, @bookmark] do |f| %>
-  <%= f.input :comment %>
-  <%= f.association :movie %>
-  <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
-<% end %>
+<div class="form-content">
+  <%= simple_form_for [ @list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.submit "Submit bookmark", class: "btn btn-primary" %>
+  <% end %>
+</div>
 
-<%# <%= link_to("Delete", lists_path(@list), method: :delete, data: { confirm: "Are you sure ?"}) %>
-
-<%= link_to("Back to the list", lists_path) %>
+<div class="container">
+  <%= link_to("Back to the list", lists_path) %>
+  <%= link_to("Delete", lists_path(@list), method: :delete, data: { confirm: "Are you sure ?" }, class: "btn") %>
+</div>

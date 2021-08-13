@@ -1,11 +1,19 @@
-<div class=".navbar-lewagon .navbar-collapse .navbar-brand img">
-  <h1>Take a look at your lists</h1>
+<div class="banner">
+  <div class="container">
+    <h1>Take a look at your lists</h1>
+  </div>
 </div>
 
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
+<div class="button-create">
+  <%= link_to("Create a new list", new_list_path) %>
+</div>
 
-<%= link_to("Create a new list", new_list_path) %>
+<div class="list-container">
+  <div class="d-flex">
+    <% @lists.each do |list| %>
+      <div class="card-list">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
+  </div>
+</div>
