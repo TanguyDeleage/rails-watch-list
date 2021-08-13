@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background-color: #F9DF57;
+  background-color: #F3B61F;
   color: black;
 }
 
@@ -14,14 +14,44 @@
 
 // Rajouter par moi
 
-// .nav {
-//   background-color: #F9DF57;
-//   color: black;
-//   height: 150px;
-//   h1 {
-//     font-size: 48px;
-//     font-weight: bold;
-//     text-align: center;
 
-//   }
-// }
+.banner {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+}
+
+.banner h1 {
+  margin: 0 auto;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 56px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 100px;
+position: relative;
+    top: -50px;
+}
+
+
+.button-create {
+  display: inline-block;
+  a{
+    color: white;
+    background-color: #7D0117;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: lighter;
+    transition: opacity 0.3s ease;
+    margin: 5px;
+  }
+}
+
+.container-button {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-create:hover {
+  opacity: 1;
+}

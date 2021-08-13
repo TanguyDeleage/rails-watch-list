@@ -6,36 +6,61 @@
 
 // Rajouter par moi
 
-// .cards {
-//   li{
-//     list-style-type: none;
-//     display: flex;
-//   }
-//   a {
-//     text-decoration: none;
-//     color: black;
-//   }
-// }
+.card-category {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #7D0117;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}
 
-// .card{
-//   display: inline-flex;
-//   border: black 1px solid;
-//   justify-content: space-between;
-// }
+.card-category a {
+  text-decoration: none;
+  color: white;
+}
 
-// .button-create{
-//   border: solid black 1px;
-//   border-radius: 15px;
-//   background-color: black;
-//   width: fit-content;
-//   padding: 8px;
-//   margin: 10px auto;
-//   a{
-//     text-decoration: none;
-//      color: #F9DF57;
-//   }
-// }
+.d-flex {
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
-//  a:hover {
-//        color: white;
-//      }
+.show-banner {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.add-movies {
+  margin-bottom: 40px;
+}
+
+.show-container {
+  margin-left: 10px;
+}
+
+.show-buttons{
+  margin-top: 30px;
+}
+
+.button-delete-list{
+margin-top: 40px;
+text-align: center;
+background-color: black;
+width: 150px;
+border-radius: 5px;
+margin-bottom: 20px;
+margin-left: 20px;
+
+}
+
+.button-delete-list a {
+  text-decoration: none;
+  color: white;
+}
